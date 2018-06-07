@@ -2,7 +2,7 @@
  * This file is used to combine all reducers
 */
 
-import album from './album';
+import album from './reducer';
 
 // Combine our reducers
 import { combineReducers } from 'redux';

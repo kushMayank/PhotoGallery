@@ -6,7 +6,7 @@
 */
 
 import { filter, merge } from 'lodash';
-import * as ActionTypes from './../constants/ActionTypes';
+import * as ActionTypes from './../constants/actiontypes';
 
 function album(state = {}, action) {
   // We never want to mutate state object directly, so we create

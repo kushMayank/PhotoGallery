@@ -35,7 +35,10 @@ import ThumbnailList from './thumblist';
 
 class GalleryPage extends Component {
   constructor(props) {
+      
     super(props);
+
+    console.log(" in the Gallery page constructor ",this.props)
     this.goToNext = this.goToNext.bind(this);
     this.goToPrev = this.goToPrev.bind(this);
     this.thumbnailClick = this.thumbnailClick.bind(this);
@@ -76,9 +79,9 @@ class GalleryPage extends Component {
   // Renders our current image container, including header, footer and arrows
   renderImage() {
     // Inline our images
-    const currentImageUrl = require(`./../../images/${this.props.currentImage.url}`);
-    const rightArrowUrl = require('./../../images/right.png');
-    const leftArrowUrl = require('./../../images/left.png');
+    const currentImageUrl = require(`./../../image/${this.props.currentImage.url}`);
+    const rightArrowUrl = require('./../../image/right.png');
+    const leftArrowUrl = require('./../../image/left.png');
 
     return (
       <div>
@@ -120,12 +123,12 @@ class GalleryPage extends Component {
   }
 }
 
-GalleryPage.propTypes = {
-  dispatch: PropTypes.func.isRequired,
-  albumName: PropTypes.string.isRequired,
-  currentImage: PropTypes.object.isRequired,
-  photos: PropTypes.array.isRequired,
-};
+// GalleryPage.propTypes = {
+//   dispatch: PropTypes.func.isRequired,
+//   albumName: PropTypes.string.isRequired,
+//   currentImage: PropTypes.object.isRequired,
+//   photos: PropTypes.array.isRequired,
+// };
 
 
 // Here we define the state variables that we want access as props

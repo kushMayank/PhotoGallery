@@ -36,10 +36,12 @@ export function initApp() {
   console.log(" in the init app");
   return dispatch => {
     dispatch(requestAlbumData());
+    console.log("jiii")
     // Using an asynchronous call to show how we would fetch images if
     // they were stored in a database or some external location.
     return axios.get(`http://localhost:3000/gallery.json`)
             .then(response => {
+              console.log("hiiiii here in axios");
               dispatch(receiveAlbumData(response.data));
             })
             .catch(error => dispatch(errorLoadingAlbum(error)));

@@ -1,7 +1,9 @@
 import React ,{Component} from'react';
+import Thumbnail from './thumbnail';
 
 class Thumblist extends Component{
     constructor(props){
+        console.log("in the Thumblist constructor")
         super(props)
     }
 
@@ -10,7 +12,7 @@ class Thumblist extends Component{
             <div>
                 <h4>Thumblist </h4>
                 <div className='imagethumbnail'>
-                
+                    <Thumbnail/>
                 </div>
             </div>
         )
